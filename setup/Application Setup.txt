@@ -1,0 +1,25 @@
+Copy catalina file to D:\jboss-4.0.3\server\default\conf
+
+JBoss Conection Pooling
+-----------------------
+Copy Files to D:\jboss-4.0.3\server\default\deploy
+            - mysql-ds
+	      jbossjca-service
+
+Delete File - hsql**.xml // Not Needed.
+
+Place MySQL Connector in D:\jboss\server\default\lib since we are using JBoss connection pooling.
+
+
+D:\jboss-4.0.3\server\default\deploy\jbossweb-tomcat55.sar
+context.xml - comment 
+<!-- <InstanceListener>org.jboss.web.tomcat.security.RunAsListener
+</InstanceListener> -->
+
+
+Servlet Invoker
+---------------
+D:\jboss-4.0.3\server\default\deploy\jbossweb-tomcat55.sar\conf
+web.xml - uncomment invoker in 2 places.
+
+and server.xml - change the port 8080 to 8081 if u want JBoss to use 8081 Port.

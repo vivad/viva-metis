@@ -1,0 +1,19 @@
+mysql/bin path should be set in the Environment Variables.
+
+Disable Foriegn Key Check
+-------------------------
+- If necessary During importing to available FK conflict
+- SET foreign_key_checks=0;
+
+Exprot & Import Database Script using Command prompt
+----------------------------------------------------
+mysql -uusername -ppassword DBname < secerp.sql
+
+mysqldump -u root -p school > school.sql //Single DB
+mysqldump -u root -p --all-databases > school.sql //All DB
+
+Increase 
+----------------------------------------------
+set session max_allowed_packet=1600000;
+
+show variables; // To see all session variables.
